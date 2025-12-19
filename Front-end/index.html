@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link rel="stylesheet" href="./style.css" />
+    <!--for online logo -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script
+      src="https://kit.fontawesome.com/YOUR_KIT_CODE.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- font family -->
+     <link href="https://api.fontshare.com/v2/css?f[]=alpino@100&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <section id="Ekalavy_home">
+      <nav>
+        <div class="left">
+          <div><a href="index.html"><i class="fa-duotone fa-solid fa-house"></i></a></div>
+        </div>
+        <div class="right">
+          <ul>
+            <li><a href="./login.html">FOUND</a></li>
+             <li><a href="./login.html">LOST</a></li>
+            <li><a href="./login.html"><i class="fa-solid fa-arrow-right-to-bracket"></i></a></li>
+            <li><a href="./sginup.html"><i class="fa-solid fa-user-plus"></i></a></li>
+          </ul>
+        </div>
+      </nav>
+      <!-- .........................nav html code........................................... -->
+      <!-- .........................mainbox html code........................................ -->
+
+      <div class="mainBox">
+        <div class="deco">
+          <div class="leftCircle"></div>
+          <div class="rightCircle"></div>
+        </div>
+
+        <div class="asklogin">
+          <p>
+            You Have To <br />
+            Log-in Or Sgin-up <br />
+            To See The Weather
+          </p>
+          <div class="btn">
+            <button><a href="./login.html"> Log-In </a></button>
+            <button><a href="./signup.html">Sgin-up</a></button>
+          </div>
+        </div>
+
+        <div class="runTerms">
+          <h2>We are with u 😌</h2>
+          <label for="Jshelp"></label>
+          <textarea rows="5" cols="5" id="Jshelp"></textarea>
+          <button type="submit" class="login-button" onclick="printTerms()">
+            press me
+          </button>
+        </div>
+      </div>
+    </section>
+    <script src="./index.js"></script>
+  </body>
+</html>

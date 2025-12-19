@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+     <title>Foundit😎</title>
+    <link rel="stylesheet" href="./style.css" />
+     <!--for online logo -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script
+      src="https://kit.fontawesome.com/YOUR_KIT_CODE.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <section id="Ekalavy_login">
+      <nav>
+        <div class="left">
+          <div><a href="./index.html"><i class="fa-duotone fa-solid fa-house"></i></a></div>
+        </div>
+        <div class="right">
+          <ul>
+            <li><a href="./login.html">FOUND</a></li>
+             <li><a href="./login.html">LOST</a></li>
+            <li><a href="./login.html"><i class="fa-solid fa-arrow-right-to-bracket"></i></a></li>
+            <li><a href="./sginup.html"><i class="fa-solid fa-user-plus"></i></a></li>
+         </ul>
+        </div>
+      </nav>
+      <div class="login-container">
+        <div class="login-box">
+          <h2>Log In</h2>
+          <form  action="./desktop.html" >
+            <div class="input-group">
+              <label for="username">Username </label>
+              <input type="text" id="username" name="username" value="" />
+            </div>
+            <div class="input-group">
+              <label for="password">Password</label>
+              <input type="password" id="password" name="password" value="" />
+            </div>
+            <button type="submit" class="login-button" onclick="toCheack(event)">
+              Log In
+            </button>
+          </form>
+          <p class="signup-link">
+            Don't have an account? <a href="./signup.html">Sign Up</a>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <script>
+
+          var sprinter = true;
+      function toCheack(event) {
+
+        const username = document.getElementById("username");
+        const noSpaceLetters = username.value.trim();
+        const length = noSpaceLetters.length;
+        console.log(`${length} username`);
+
+
+        const password = document.getElementById("password");
+        const noSpaceLettersPass = password.value.trim();
+        const lengthPass = noSpaceLetters.length;
+        console.log(`${lengthPass} password`);
+        // --------------for userName--------------------
+
+        // to avoid blank inouts
+        if (username.value === "" && password.value === "") {
+          alert("Enter an username and pass  1st ");
+          sprinter = false;
+        } else if (username.value !== "" && password.value !== "") {
+
+          if (length < 3) {
+            alert("enter name greater then 3");
+            username.value = "";
+            sprinter = false;
+          } else if (length > 25) {
+            alert("can u try with initals?");
+            username.value = "";
+            sprinter = false;
+          }else{
+            sprinter = true;
+          }
+
+          
+          // --------------for password--------------------
+
+          // to avoid blank inouts
+
+          if (lengthPass < 3) {
+            alert("enter pass greater then 3");
+            sprinter = false;
+            password.value = "";
+          } else if (lengthPass > 25) {
+            alert("can u try with small one");
+            password.value = "";
+            sprinter = false;
+          }
+        } else {
+         sprinter = true;
+        }
+
+        if ( sprinter === true) {
+          alert("u got it😎");
+        }else{
+          event.preventDefault();
+        }
+      }
+      //----------to make desplay error----------------
+    
+    </script>
+  </body>
+</html>
+
